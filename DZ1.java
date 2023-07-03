@@ -18,7 +18,7 @@ public class DZ1 {
         
 
         //2
-        int[] resultArray = diffArr(new int[] {1,2,3}, new int[] {3,2,10});
+        int[] resultArray = diffArr(new int[] {0,2,3}, new int[] {0,2,10});
         for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + " ");
         }
@@ -84,7 +84,10 @@ public class DZ1 {
         checkArrayLen(arr1, arr2);
         int[] quotient = arr1;
         for (int i = 0; i < quotient.length; i++) {
-            if (arr1[i]>arr2[i]){
+            if (arr1[i] == 0 && arr2[i] == 0){
+                quotient[i] = 0;
+            }
+            else if (arr1[i]>arr2[i] || arr1[i] == 0){
                 quotient[i] =  arr1[i] / arr2[i];
             }
             else{
